@@ -1,0 +1,262 @@
+/* =====================================================
+   ROOT
+===================================================== */
+
+.root{
+    -fx-background-color:#eef4fb;
+    -fx-font-family:"Segoe UI";
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header{
+
+    -fx-background-color:linear-gradient(to right,#1565C0,#42A5F5);
+
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.25),12,0,0,3);
+}
+
+.header-title{
+
+    -fx-font-size:34px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:white;
+}
+
+/* =====================================================
+   TITLED PANE
+===================================================== */
+
+.titled-pane{
+
+    -fx-background-radius:12;
+
+    -fx-border-radius:12;
+
+    -fx-border-color:#d8e2f1;
+
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.12),10,0,0,2);
+}
+
+.titled-pane>.title{
+
+    -fx-background-color:linear-gradient(to right,#1E88E5,#42A5F5);
+
+    -fx-text-fill:white;
+
+    -fx-font-size:16px;
+
+    -fx-font-weight:bold;
+}
+
+.titled-pane>.content{
+
+    -fx-background-color:white;
+}
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.label{
+
+   /* -fx-font-size:14px;*/
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:#37474F;
+}
+
+/* =====================================================
+   COMBOBOX
+===================================================== */
+
+.combo-box{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:8;
+
+    -fx-border-radius:8;
+
+    -fx-border-color:#cfd8dc;
+
+    -fx-font-size:14px;
+
+    -fx-pref-height:38;
+}
+
+.combo-box:focused{
+
+    -fx-border-color:#2196F3;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button{
+
+    -fx-background-radius:8;
+
+    -fx-font-size:15px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:white;
+
+    -fx-cursor:hand;
+
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.18),8,0,0,2);
+}
+
+/* Find Button */
+
+.find-button{
+
+    -fx-background-color:linear-gradient(to right,#1976D2,#0D47A1);
+}
+
+.find-button:hover{
+
+    -fx-background-color:linear-gradient(to right,#1E88E5,#1565C0);
+
+    -fx-scale-x:1.04;
+
+    -fx-scale-y:1.04;
+}
+
+/* PDF */
+
+.primary-button{
+
+    -fx-background-color:linear-gradient(to right,#E53935,#C62828);
+}
+
+.primary-button:hover{
+
+    -fx-background-color:linear-gradient(to right,#EF5350,#D32F2F);
+
+    -fx-scale-x:1.05;
+
+    -fx-scale-y:1.05;
+}
+
+/* Excel */
+
+.success-button{
+
+    -fx-background-color:linear-gradient(to right,#43A047,#2E7D32);
+}
+
+.success-button:hover{
+
+    -fx-background-color:linear-gradient(to right,#66BB6A,#388E3C);
+
+    -fx-scale-x:1.05;
+
+    -fx-scale-y:1.05;
+}
+
+/* Dashboard */
+
+.dashboard-button{
+
+    -fx-background-color:linear-gradient(to right,#1565C0,#1976D2);
+}
+
+.dashboard-button:hover{
+
+    -fx-background-color:linear-gradient(to right,#1E88E5,#42A5F5);
+
+    -fx-scale-x:1.05;
+
+    -fx-scale-y:1.05;
+}
+
+.button:pressed{
+
+    -fx-scale-x:.97;
+
+    -fx-scale-y:.97;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-view{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:12;
+
+    -fx-border-radius:12;
+
+    -fx-border-color:#d8e2f1;
+
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.12),10,0,0,2);
+}
+
+.table-view .column-header{
+
+    -fx-background-color:#1976D2;
+}
+
+.table-view .column-header .label{
+
+    -fx-text-fill:white;
+
+    -fx-font-size:14px;
+
+    -fx-font-weight:bold;
+}
+
+.table-row-cell{
+
+    -fx-cell-size:38;
+
+    -fx-font-size:14px;
+}
+
+.table-row-cell:odd{
+
+    -fx-background-color:#f8fbff;
+}
+
+.table-row-cell:even{
+
+    -fx-background-color:white;
+}
+
+.table-row-cell:selected{
+
+    -fx-background-color:#90CAF9;
+}
+
+.table-row-cell:hover{
+
+    -fx-background-color:#E3F2FD;
+}
+
+/* =====================================================
+   SCROLL BAR
+===================================================== */
+
+.scroll-bar:vertical .thumb{
+
+    -fx-background-color:#90CAF9;
+
+    -fx-background-radius:10;
+}
+
+.scroll-bar:horizontal .thumb{
+
+    -fx-background-color:#90CAF9;
+
+    -fx-background-radius:10;
+}

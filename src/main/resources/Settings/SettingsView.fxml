@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Settings.SettingsController"
+            prefWidth="1100"
+            prefHeight="750"
+            stylesheets="@style.css"
+            styleClass="root">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+        <HBox alignment="CENTER"
+              prefHeight="80"
+              styleClass="header">
+
+            <Label text="⚙ Settings"
+                   styleClass="header-title">
+                <font>
+                    <Font size="32"/>
+                </font>
+            </Label>
+
+        </HBox>
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <ScrollPane fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    styleClass="scroll-pane">
+
+            <VBox spacing="25"
+                  alignment="TOP_CENTER">
+
+                <padding>
+                    <Insets top="30"
+                            right="50"
+                            bottom="30"
+                            left="50"/>
+                </padding>
+
+                <!-- ================= ACCOUNT SETTINGS ================= -->
+
+                <TitledPane text="👤 Account Settings"
+                            expanded="true">
+
+                    <GridPane hgap="20"
+                              vgap="18">
+
+                        <padding>
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="20"
+                                    left="20"/>
+                        </padding>
+
+                        <Label text="Admin Name:"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="0"/>
+
+                        <TextField fx:id="txtName"
+                                   promptText="Enter Admin Name"
+                                   prefWidth="300"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Email Address:"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="0"/>
+
+                        <TextField fx:id="txtEmail"
+                                   promptText="Enter Email"
+                                   prefWidth="300"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Phone Number:"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="0"/>
+
+                        <TextField fx:id="txtPhone"
+                                   promptText="Enter Phone Number"
+                                   prefWidth="300"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="1"/>
+
+                    </GridPane>
+
+                </TitledPane>
+
+                <!-- ================= SECURITY ================= -->
+
+                <TitledPane text="🔒 Security Settings">
+
+                    <GridPane hgap="20"
+                              vgap="18">
+
+                        <padding>
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="20"
+                                    left="20"/>
+                        </padding>
+
+                        <Label text="Current Password:"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="0"/>
+
+                        <PasswordField fx:id="txtCurrentPassword"
+                                       prefWidth="300"
+                                       GridPane.rowIndex="0"
+                                       GridPane.columnIndex="1"/>
+
+                        <Label text="New Password:"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="0"/>
+
+                        <PasswordField fx:id="txtNewPassword"
+                                       prefWidth="300"
+                                       GridPane.rowIndex="1"
+                                       GridPane.columnIndex="1"/>
+
+                        <Label text="Confirm Password:"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="0"/>
+
+                        <PasswordField fx:id="txtConfirmPassword"
+                                       prefWidth="300"
+                                       GridPane.rowIndex="2"
+                                       GridPane.columnIndex="1"/>
+
+                    </GridPane>
+
+                </TitledPane>
+
+                <!-- ================= PREFERENCES ================= -->
+
+                <TitledPane text="🎨 Application Preferences">
+
+                    <VBox spacing="15">
+
+                        <padding>
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="20"
+                                    left="20"/>
+                        </padding>
+
+                        <CheckBox fx:id="chkNotification"
+                                  text="Enable Notifications"/>
+
+                        <CheckBox fx:id="chkDarkMode"
+                                  text="Enable Dark Mode"/>
+
+                        <CheckBox fx:id="chkAutoBackup"
+                                  text="Automatic Database Backup"/>
+
+                    </VBox>
+
+                </TitledPane>
+
+                <!-- ================= DATABASE ================= -->
+
+                <TitledPane text="💾 Database Management"
+                            expanded="true">
+
+                    <VBox spacing="20"
+                          alignment="CENTER">
+
+                        <padding>
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="20"
+                                    left="20"/>
+                        </padding>
+
+                        <Label text="Manage your application database using the options below."/>
+
+                        <HBox spacing="25"
+                              alignment="CENTER">
+
+                            <Button fx:id="btnBackup"
+                                    text="📁 Backup Database"
+                                    prefWidth="220"
+                                    prefHeight="45"
+                                    styleClass="secondary-button"
+                                    onAction="#doBackup"/>
+
+                            <Button fx:id="btnRestore"
+                                    text="♻ Restore Database"
+                                    prefWidth="220"
+                                    prefHeight="45"
+                                    styleClass="secondary-button"
+                                    onAction="#doRestore"/>
+
+                        </HBox>
+
+                    </VBox>
+
+                </TitledPane>
+
+            </VBox>
+
+        </ScrollPane>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox spacing="20"
+              alignment="CENTER"
+              prefHeight="85"
+              styleClass="bottom-bar">
+
+            <padding>
+                <Insets top="10"
+                        right="20"
+                        bottom="15"
+                        left="20"/>
+            </padding>
+
+            <Button fx:id="btnSave"
+                    text="💾 Save Settings"
+                    prefWidth="190"
+                    prefHeight="45"
+                    styleClass="save-button"
+                    onAction="#doSave"/>
+
+            <Button fx:id="btnDashboard"
+                    text="🏠 Go to Dashboard"
+                    prefWidth="220"
+                    prefHeight="45"
+                    styleClass="dashboard-button"
+                    onAction="#goDashboard"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

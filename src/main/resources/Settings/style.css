@@ -1,0 +1,196 @@
+/* =======================================================
+   Root
+======================================================= */
+
+.root{
+    -fx-background-color:#eef3fb;
+    -fx-font-family:"Segoe UI";
+}
+
+/* =======================================================
+   Header
+======================================================= */
+
+.header{
+    -fx-background-color:linear-gradient(to right,#1565C0,#42A5F5);
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.25),12,0,0,3);
+}
+
+.header-title{
+    /*-fx-font-size:60px;*/
+    -fx-font-weight:bold;
+    -fx-text-fill:white;
+}
+
+/* =======================================================
+   Titled Pane
+======================================================= */
+
+.titled-pane{
+    -fx-background-radius:12;
+    -fx-border-radius:12;
+    -fx-border-color:#d8e2f1;
+    -fx-border-width:1;
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.10),10,0,0,2);
+}
+
+.titled-pane > .title{
+    -fx-background-color:linear-gradient(to right,#1E88E5,#42A5F5);
+    -fx-text-fill:white;
+    -fx-font-size:16px;
+    -fx-font-weight:bold;
+    -fx-background-radius:12 12 0 0;
+}
+
+.titled-pane > *.content{
+    -fx-background-color:white;
+    -fx-padding:20;
+}
+
+/* =======================================================
+   Labels
+======================================================= */
+
+.label{
+    /*-fx-font-size:14px;*/
+    -fx-font-weight:bold;
+    -fx-text-fill:#37474F;
+}
+
+/* =======================================================
+   TextFields
+======================================================= */
+
+.text-field,
+.password-field{
+
+    -fx-background-color:white;
+    -fx-background-radius:8;
+    -fx-border-radius:8;
+    -fx-border-color:#cfd8dc;
+    -fx-border-width:1.3;
+    -fx-font-size:14px;
+    -fx-pref-height:38;
+}
+
+.text-field:focused,
+.password-field:focused{
+
+    -fx-border-color:#2196F3;
+    -fx-effect:dropshadow(gaussian,#90CAF9,8,0.2,0,0);
+}
+
+/* =======================================================
+   CheckBox
+======================================================= */
+
+.check-box{
+
+    -fx-font-size:15px;
+    -fx-text-fill:#455A64;
+}
+
+.check-box:selected .mark{
+
+    -fx-background-color:white;
+}
+
+.check-box:selected .box{
+
+    -fx-background-color:#2196F3;
+}
+
+/* =======================================================
+   Buttons
+======================================================= */
+
+.button{
+
+    -fx-background-radius:8;
+    -fx-font-size:15px;
+    -fx-font-weight:bold;
+    -fx-text-fill:white;
+    -fx-cursor:hand;
+    -fx-padding:10 20;
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.20),8,0,0,2);
+}
+
+/* Backup / Restore */
+
+.secondary-button{
+
+    -fx-background-color:linear-gradient(to right,#5C6BC0,#3949AB);
+}
+
+.secondary-button:hover{
+
+    -fx-background-color:linear-gradient(to right,#7986CB,#5C6BC0);
+    -fx-scale-x:1.04;
+    -fx-scale-y:1.04;
+}
+
+/* Save */
+
+.save-button{
+
+    -fx-background-color:linear-gradient(to right,#43A047,#2E7D32);
+}
+
+.save-button:hover{
+
+    -fx-background-color:linear-gradient(to right,#66BB6A,#388E3C);
+    -fx-scale-x:1.05;
+    -fx-scale-y:1.05;
+}
+
+/* Dashboard */
+
+.dashboard-button{
+
+    -fx-background-color:linear-gradient(to right,#1565C0,#1E88E5);
+}
+
+.dashboard-button:hover{
+
+    -fx-background-color:linear-gradient(to right,#1976D2,#42A5F5);
+    -fx-scale-x:1.05;
+    -fx-scale-y:1.05;
+}
+
+.button:pressed{
+
+    -fx-scale-x:.97;
+    -fx-scale-y:.97;
+}
+
+/* =======================================================
+   Bottom Bar
+======================================================= */
+
+.bottom-bar{
+
+    -fx-background-color:#eef3fb;
+}
+
+/* =======================================================
+   Scroll Pane
+======================================================= */
+
+.scroll-pane{
+
+    -fx-background:white;
+}
+
+.scroll-pane > .viewport{
+
+    -fx-background:white;
+}
+
+/* =======================================================
+   Hover Effect
+======================================================= */
+
+.titled-pane:hover{
+
+    -fx-effect:dropshadow(gaussian,rgba(33,150,243,.25),15,0,0,4);
+}

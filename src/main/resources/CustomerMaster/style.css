@@ -1,0 +1,176 @@
+/* Root */
+
+.rootPane{
+    -fx-background-color:#F4F7FC;
+    -fx-font-family:"Segoe UI";
+}
+
+
+/* Header */
+
+.header{
+    -fx-background-color:linear-gradient(to right,#0F4C81,#1F6FB2);
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.25),12,0,0,3);
+}
+
+.headerTitle{
+    -fx-text-fill:white;
+    -fx-font-size:25px;
+    -fx-font-weight:bold;
+}
+
+.headerSubtitle{
+    -fx-text-fill:white;
+    -fx-font-size:21px;
+    -fx-font-weight:bold;
+}
+
+
+/* Card */
+
+.mainCard{
+    -fx-background-color:white;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.15),18,0,0,5);
+}
+
+
+/* Labels */
+
+.fieldLabel{
+    -fx-font-size:14px;
+    -fx-font-weight:bold;
+    -fx-text-fill:#34495E;
+}
+
+
+/* TextField */
+
+.textField{
+    -fx-background-color:white;
+    -fx-background-radius:8;
+    -fx-border-radius:8;
+    -fx-border-color:#C9D3E1;
+    -fx-border-width:1.2;
+    -fx-font-size:14px;
+}
+
+.textField:focused{
+    -fx-border-color:#1976D2;
+    -fx-border-width:2;
+}
+
+
+/* TextArea */
+
+.textArea{
+    -fx-background-radius:8;
+    -fx-border-radius:8;
+    -fx-border-color:#C9D3E1;
+    -fx-font-size:14px;
+}
+
+.textArea:focused{
+    -fx-border-color:#1976D2;
+}
+
+
+/* ComboBox */
+
+.comboBox{
+    -fx-background-radius:8;
+    -fx-border-radius:8;
+    -fx-border-color:#C9D3E1;
+    -fx-font-size:14px;
+}
+
+
+/* Image */
+
+.imageBox{
+    -fx-border-color:#C8D0DB;
+    -fx-border-width:2;
+    -fx-background-color:#F8F9FB;
+}
+
+
+/* Buttons */
+
+.button{
+    -fx-font-size:14px;
+    -fx-font-weight:bold;
+    -fx-text-fill:white;
+    -fx-background-radius:8;
+    -fx-cursor:hand;
+}
+
+.button:hover{
+    -fx-opacity:0.90;
+}
+
+
+/* Search */
+
+.primaryButton{
+    -fx-background-color:#1976D2;
+}
+
+.primaryButton:hover{
+    -fx-background-color:#1565C0;
+}
+
+
+/* Save */
+
+.successButton{
+    -fx-background-color:#2E7D32;
+}
+
+.successButton:hover{
+    -fx-background-color:#1B5E20;
+}
+
+
+/* Update */
+
+.warningButton{
+    -fx-background-color:#FB8C00;
+}
+
+.warningButton:hover{
+    -fx-background-color:#EF6C00;
+}
+
+
+/* Delete */
+
+.dangerButton{
+    -fx-background-color:#D32F2F;
+}
+
+.dangerButton:hover{
+    -fx-background-color:#B71C1C;
+}
+
+
+/* Browse + Clear */
+
+.secondaryButton{
+    -fx-background-color:#607D8B;
+}
+
+.secondaryButton:hover{
+    -fx-background-color:#455A64;
+}
+
+
+/* Dashboard */
+
+.dashboardButton{
+    -fx-background-color:#1565C0;
+}
+
+.dashboardButton:hover{
+    -fx-background-color:#0D47A1;
+}

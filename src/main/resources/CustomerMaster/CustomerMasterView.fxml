@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="CustomerMaster.CustomerMasterController"
+            prefWidth="1100"
+            prefHeight="750"
+            stylesheets="@style.css"
+            styleClass="rootPane">
+
+    <children>
+
+        <!-- HEADER -->
+
+        <Pane layoutX="0" layoutY="0"
+              prefWidth="1100"
+              prefHeight="70"
+              styleClass="header">
+
+            <children>
+
+                <Label layoutX="25"
+                       layoutY="18"
+                       text="Property Dealer Assistance"
+                       styleClass="headerTitle"/>
+
+                <Label layoutX="790"
+                       layoutY="22"
+                       text="Customer Master"
+                       styleClass="headerSubtitle"/>
+
+            </children>
+
+        </Pane>
+
+
+        <!-- MAIN CARD -->
+
+        <Pane layoutX="30"
+              layoutY="95"
+              prefWidth="1040"
+              prefHeight="620"
+              styleClass="mainCard">
+
+            <children>
+
+                <!-- Mobile -->
+
+                <Label layoutX="40"
+                       layoutY="40"
+                       text="Mobile Number"
+                       styleClass="fieldLabel"/>
+
+                <TextField fx:id="txtMob"
+                           layoutX="190"
+                           layoutY="35"
+                           prefWidth="250"
+                           prefHeight="38"
+                           styleClass="textField"/>
+
+                <Button fx:id="btnSearch"
+                        layoutX="470"
+                        layoutY="35"
+                        prefWidth="110"
+                        prefHeight="38"
+                        text="Search"
+                        styleClass="primaryButton"
+                        onAction="#doSearch"/>
+
+                <!-- Name -->
+
+                <Label layoutX="40"
+                       layoutY="100"
+                       text="Customer Name"
+                       styleClass="fieldLabel"/>
+
+                <TextField fx:id="txtName"
+                           layoutX="190"
+                           layoutY="95"
+                           prefWidth="350"
+                           prefHeight="38"
+                           styleClass="textField"/>
+
+                <!-- Address -->
+
+                <Label layoutX="40"
+                       layoutY="160"
+                       text="Address"
+                       styleClass="fieldLabel"/>
+
+                <TextArea fx:id="txtAddress"
+                          layoutX="190"
+                          layoutY="155"
+                          prefWidth="350"
+                          prefHeight="90"
+                          wrapText="true"
+                          styleClass="textArea"/>
+
+                <!-- City -->
+
+                <Label layoutX="40"
+                       layoutY="275"
+                       text="City"
+                       styleClass="fieldLabel"/>
+
+                <TextField fx:id="txtCity"
+                           layoutX="190"
+                           layoutY="270"
+                           prefWidth="250"
+                           prefHeight="38"
+                           styleClass="textField"/>
+
+                <!-- Email -->
+
+                <Label layoutX="40"
+                       layoutY="335"
+                       text="Email"
+                       styleClass="fieldLabel"/>
+
+                <TextField fx:id="txtEmail"
+                           layoutX="190"
+                           layoutY="330"
+                           prefWidth="350"
+                           prefHeight="38"
+                           styleClass="textField"/>
+
+                <!-- Customer Type -->
+
+                <Label layoutX="40"
+                       layoutY="395"
+                       text="Customer Type"
+                       styleClass="fieldLabel"/>
+
+                <ComboBox fx:id="cmbType"
+                          layoutX="190"
+                          layoutY="390"
+                          prefWidth="250"
+                          prefHeight="38"
+                          styleClass="comboBox"/>
+
+                <!-- Customer Image -->
+
+                <Label layoutX="655"
+                       layoutY="35"
+                       text="Customer Image"
+                       styleClass="fieldLabel"/>
+
+                <ImageView fx:id="imgCustomer"
+                           layoutX="620"
+                           layoutY="65"
+                           fitWidth="170"
+                           fitHeight="170"
+                           preserveRatio="true"
+                           styleClass="imageBox"/>
+
+                <Button fx:id="btnBrowsePic"
+                        layoutX="650"
+                        layoutY="250"
+                        prefWidth="110"
+                        prefHeight="38"
+                        text="Browse"
+                        styleClass="secondaryButton"
+                        onAction="#doBrowsePic"/>
+
+                <!-- Aadhaar -->
+
+                <Label layoutX="870"
+                       layoutY="35"
+                       text="Aadhaar Image"
+                       styleClass="fieldLabel"/>
+
+                <ImageView fx:id="imgAadhar"
+                           layoutX="840"
+                           layoutY="65"
+                           fitWidth="170"
+                           fitHeight="170"
+                           preserveRatio="true"
+                           styleClass="imageBox"/>
+
+                <Button fx:id="btnBrowseAadhar"
+                        layoutX="865"
+                        layoutY="250"
+                        prefWidth="110"
+                        prefHeight="38"
+                        text="Browse"
+                        styleClass="secondaryButton"
+                        onAction="#doBrowseAadhar"/>
+
+                <!-- Bottom Buttons -->
+
+                <Button fx:id="btnSave"
+                        layoutX="120"
+                        layoutY="540"
+                        prefWidth="120"
+                        prefHeight="42"
+                        text="Save"
+                        styleClass="successButton"
+                        onAction="#doSave"/>
+
+                <Button fx:id="btnUpdate"
+                        layoutX="290"
+                        layoutY="540"
+                        prefWidth="120"
+                        prefHeight="42"
+                        text="Update"
+                        styleClass="warningButton"
+                        onAction="#doUpdate"/>
+
+                <Button fx:id="btnDelete"
+                        layoutX="460"
+                        layoutY="540"
+                        prefWidth="120"
+                        prefHeight="42"
+                        text="Delete"
+                        styleClass="dangerButton"
+                        onAction="#doDelete"/>
+
+                <Button fx:id="btnClear"
+                        layoutX="630"
+                        layoutY="540"
+                        prefWidth="120"
+                        prefHeight="42"
+                        text="Clear"
+                        styleClass="secondaryButton"
+                        onAction="#doClear"/>
+
+                <Button fx:id="goDashboard"
+                        layoutX="820"
+                        layoutY="540"
+                        prefWidth="170"
+                        prefHeight="42"
+                        text="← Dashboard"
+                        styleClass="dashboardButton"
+                        onAction="#goDashboard"/>
+
+            </children>
+
+        </Pane>
+
+    </children>
+
+</AnchorPane>

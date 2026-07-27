@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="DealsFinder.DealsFinderController"
+            prefWidth="1350"
+            prefHeight="760"
+            stylesheets="@styles.css"
+            styleClass="root">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <StackPane prefHeight="75"
+                   styleClass="header">
+
+            <children>
+
+                <Label text="📄 Deals Finder"
+                       styleClass="header-title"/>
+
+            </children>
+
+        </StackPane>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="18">
+
+            <padding>
+                <Insets top="20"
+                        right="20"
+                        bottom="20"
+                        left="20"/>
+            </padding>
+
+            <!-- ================= SEARCH PANEL ================= -->
+
+            <TitledPane text="🔍 Search Deals"
+                        collapsible="false"
+                        expanded="true"
+                        styleClass="search-pane">
+
+                <content>
+
+                    <GridPane hgap="18"
+                              vgap="18">
+
+                        <padding>
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="20"
+                                    left="20"/>
+                        </padding>
+
+                        <columnConstraints>
+
+                            <ColumnConstraints percentWidth="10"/>
+                            <ColumnConstraints percentWidth="18"/>
+
+                            <ColumnConstraints percentWidth="10"/>
+                            <ColumnConstraints percentWidth="18"/>
+
+                            <ColumnConstraints percentWidth="10"/>
+                            <ColumnConstraints percentWidth="15"/>
+
+                            <ColumnConstraints percentWidth="19"/>
+
+                        </columnConstraints>
+
+                        <rowConstraints>
+
+                            <RowConstraints/>
+
+                        </rowConstraints>
+
+                        <!-- Seller -->
+
+                        <Label text="Seller Mobile"
+                               GridPane.columnIndex="0"
+                               GridPane.rowIndex="0"/>
+
+                        <ComboBox fx:id="cmbSellerMobile"
+                                  maxWidth="Infinity"
+                                  GridPane.columnIndex="1"
+                                  GridPane.rowIndex="0"/>
+
+                        <!-- Buyer -->
+
+                        <Label text="Buyer Mobile"
+                               GridPane.columnIndex="2"
+                               GridPane.rowIndex="0"/>
+
+                        <ComboBox fx:id="cmbBuyerMobile"
+                                  maxWidth="Infinity"
+                                  GridPane.columnIndex="3"
+                                  GridPane.rowIndex="0"/>
+
+                        <!-- Status -->
+
+                        <Label text="Deal Status"
+                               GridPane.columnIndex="4"
+                               GridPane.rowIndex="0"/>
+
+                        <ComboBox fx:id="cmbStatus"
+                                  maxWidth="Infinity"
+                                  GridPane.columnIndex="5"
+                                  GridPane.rowIndex="0"/>
+
+                        <!-- Button -->
+
+                        <Button fx:id="btnFind"
+                                text="🔎 Find Deals"
+                                styleClass="find-button"
+                                maxWidth="Infinity"
+                                onAction="#doFindDeals"
+                                GridPane.columnIndex="6"
+                                GridPane.rowIndex="0"/>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- ================= TABLE ================= -->
+
+            <TableView fx:id="tblDeals"
+                       VBox.vgrow="ALWAYS">
+
+                <columns>
+
+                    <TableColumn fx:id="colPropertyId"
+                                 text="Property ID"
+                                 prefWidth="90"/>
+
+                    <TableColumn fx:id="colSellerMobile"
+                                 text="Seller Mobile"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colSellerName"
+                                 text="Seller Name"
+                                 prefWidth="150"/>
+
+                    <TableColumn fx:id="colBuyerMobile"
+                                 text="Buyer Mobile"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colBuyerName"
+                                 text="Buyer Name"
+                                 prefWidth="150"/>
+
+                    <TableColumn fx:id="colDealDate"
+                                 text="Deal Date"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colRegistryDate"
+                                 text="Registry Date"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colFinalAmount"
+                                 text="Final Amount"
+                                 prefWidth="130"/>
+
+                    <TableColumn fx:id="colAdvance"
+                                 text="Advance"
+                                 prefWidth="110"/>
+
+                    <TableColumn fx:id="colBalance"
+                                 text="Balance"
+                                 prefWidth="110"/>
+
+                    <TableColumn fx:id="colCommission"
+                                 text="Commission"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colDealStatus"
+                                 text="Status"
+                                 prefWidth="110"/>
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER"
+              spacing="20"
+              prefHeight="80">
+
+            <padding>
+                <Insets top="15"
+                        right="20"
+                        bottom="15"
+                        left="20"/>
+            </padding>
+
+            <Button text="📄 Create PDF"
+                    prefWidth="180"
+                    prefHeight="42"
+                    styleClass="primary-button"
+                    onAction="#doCreatePDF"/>
+
+            <Button text="📊 Export Excel"
+                    prefWidth="180"
+                    prefHeight="42"
+                    styleClass="success-button"
+                    onAction="#doCreateExcel"/>
+
+            <Button text="🏠 Dashboard"
+                    prefWidth="180"
+                    prefHeight="42"
+                    styleClass="dashboard-button"
+                    onAction="#goDashboard"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

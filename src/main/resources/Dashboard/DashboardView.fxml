@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800" prefWidth="1400" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboard.DashboardController">
+
+    <!-- ================= TOP BAR ================= -->
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="top-bar">
+            <padding>
+                <Insets bottom="12" left="20" right="20" top="12" />
+            </padding>
+
+            <Label styleClass="logo" text="🏠 Property Dealer Assistance" />
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Label styleClass="welcome" text="Welcome Admin" />
+
+            <Button onAction="#doLogout" styleClass="logout-button" text="Logout" />
+        </HBox>
+    </top>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <left>
+        <VBox prefWidth="230" spacing="10" styleClass="sidebar">
+
+            <padding>
+                <Insets left="15" right="15" top="20" />
+            </padding>
+
+            <Button onAction="#openDashboard" styleClass="menu-button" text="🏠 Dashboard" />
+
+            <Button onAction="#openProperties" styleClass="menu-button" text="🏡 Properties" />
+
+            <Button onAction="#openCustomers" styleClass="menu-button" text="👤 Customers" />
+
+            <Button onAction="#openDealers" styleClass="menu-button" text="🤝 Dealers" />
+
+            <Button onAction="#doBrowseCustomers" styleClass="menu-button" text="🔎 Browse Customers" />
+
+            <Button onAction="#doFindProperties" styleClass="menu-button" text="📍 Property Finder" />
+
+            <Button onAction="#doFindDeals" styleClass="menu-button" text="📄 Deals Finder" />
+
+            <Button onAction="#openAnalytics" styleClass="menu-button" text="📊 Analytics" />
+
+            <Button onAction="#openSettings" styleClass="menu-button" text="⚙ Settings" />
+
+        </VBox>
+    </left>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <center>
+
+        <VBox spacing="20" styleClass="content">
+
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <Label text="Dashboard Overview">
+                <font>
+                    <Font size="28" />
+                </font>
+            </Label>
+
+            <!-- Summary Cards -->
+
+            <HBox spacing="20">
+
+                <VBox alignment="CENTER_LEFT" prefHeight="110" prefWidth="220" styleClass="card-blue">
+
+                    <padding>
+                        <Insets left="20" />
+                    </padding>
+
+                    <Label styleClass="card-title" text="Properties" />
+
+                    <Label fx:id="lblProperties" styleClass="card-value" text="0" />
+
+                </VBox>
+
+                <VBox alignment="CENTER_LEFT" prefHeight="110" prefWidth="220" styleClass="card-green">
+
+                    <padding>
+                        <Insets left="20" />
+                    </padding>
+
+                    <Label styleClass="card-title" text="Customers" />
+
+                    <Label fx:id="lblCustomers" styleClass="card-value" text="0" />
+
+                </VBox>
+
+                <VBox alignment="CENTER_LEFT" prefHeight="110" prefWidth="220" styleClass="card-orange">
+
+                    <padding>
+                        <Insets left="20" />
+                    </padding>
+
+                    <Label styleClass="card-title" text="Available" />
+
+                    <Label fx:id="lblAvailable" styleClass="card-value" text="0" />
+
+                </VBox>
+
+                <VBox alignment="CENTER_LEFT" prefHeight="110" prefWidth="220" styleClass="card-red">
+
+                    <padding>
+                        <Insets left="20" />
+                    </padding>
+
+                    <Label styleClass="card-title" text="Sold" />
+
+                    <Label fx:id="lblSold" styleClass="card-value" text="0" />
+
+                </VBox>
+
+            </HBox>
+
+            <!-- Top Cities -->
+
+            <Label styleClass="section-title" text="Top Cities" />
+
+            <HBox spacing="20">
+
+                <VBox alignment="CENTER" prefHeight="110" prefWidth="180" styleClass="city-card">
+
+                    <Label fx:id="city1" styleClass="city-name" text="City1" />
+
+                    <Label fx:id="lblcity1" styleClass="city-count" text="45 Properties" />
+
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="110" prefWidth="180" styleClass="city-card">
+
+                    <Label fx:id="city2" styleClass="city-name" text="city2" />
+
+                    <Label fx:id="lblcity2" styleClass="city-count" text="38 Properties" />
+
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="110" prefWidth="180" styleClass="city-card">
+
+                    <Label fx:id="city3" styleClass="city-name" text="city3" />
+
+                    <Label fx:id="lblcity3" styleClass="city-count" text="27 Properties" />
+
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="110" prefWidth="180" styleClass="city-card">
+
+                    <Label fx:id="city4" styleClass="city-name" text="city4" />
+
+                    <Label fx:id="lblcity4" styleClass="city-count" text="21 Properties" />
+
+                </VBox>
+
+            </HBox>
+
+            <!-- Pie Charts -->
+
+            <HBox spacing="25" VBox.vgrow="ALWAYS">
+
+                <PieChart fx:id="propertyChart" prefHeight="350" prefWidth="500" title="Property Distribution" />
+
+                <PieChart fx:id="customerChart" prefHeight="350" prefWidth="500" title="Customer Categories" />
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

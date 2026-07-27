@@ -1,0 +1,153 @@
+.root{
+    -fx-background-color:#eef4fb;
+    -fx-font-family:"Segoe UI";
+}
+
+/* Header */
+
+.header{
+    -fx-background-color:linear-gradient(to right,#1565C0,#42A5F5);
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.25),12,0,0,3);
+}
+
+.header-title{
+    -fx-font-size:34px;
+    -fx-font-weight:bold;
+    -fx-text-fill:white;
+}
+
+/* Search Card */
+
+.search-card{
+    -fx-background-color:white;
+    -fx-background-radius:12;
+    -fx-border-radius:12;
+    -fx-border-color:#d8e2f1;
+    -fx-padding:20;
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.12),10,0,0,2);
+}
+
+.section-title{
+    -fx-font-size:20px;
+    -fx-font-weight:bold;
+    -fx-text-fill:#1565C0;
+}
+
+/* Labels */
+
+.label{
+    /*-fx-font-size:14px;*/
+    -fx-font-weight:bold;
+    -fx-text-fill:#37474F;
+}
+
+/* Inputs */
+
+.combo-box,
+.text-field{
+
+    -fx-background-color:white;
+    -fx-background-radius:8;
+    -fx-border-radius:8;
+    -fx-border-color:#cfd8dc;
+    -fx-font-size:14px;
+    -fx-pref-height:38;
+}
+
+.combo-box:focused,
+.text-field:focused{
+
+    -fx-border-color:#2196F3;
+}
+
+/* Table */
+
+.table-view{
+    -fx-background-color:white;
+    -fx-background-radius:12;
+    -fx-border-radius:12;
+    -fx-border-color:#d8e2f1;
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.12),10,0,0,2);
+}
+
+.table-view .column-header{
+    -fx-background-color:#1976D2;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill:white;
+    -fx-font-size:14px;
+    -fx-font-weight:bold;
+}
+
+.table-row-cell{
+    -fx-cell-size:38;
+}
+
+.table-row-cell:odd{
+    -fx-background-color:#f8fbff;
+}
+
+.table-row-cell:even{
+    -fx-background-color:white;
+}
+
+.table-row-cell:hover{
+    -fx-background-color:#E3F2FD;
+}
+
+.table-row-cell:selected{
+    -fx-background-color:#90CAF9;
+}
+
+/* Buttons */
+
+.button{
+    -fx-text-fill:white;
+    -fx-font-size:15px;
+    -fx-font-weight:bold;
+    -fx-background-radius:8;
+    -fx-cursor:hand;
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.18),8,0,0,2);
+}
+
+.find-button{
+    -fx-background-color:linear-gradient(to right,#1976D2,#0D47A1);
+}
+
+.find-button:hover{
+    -fx-scale-x:1.05;
+    -fx-scale-y:1.05;
+}
+
+.pdf-button{
+    -fx-background-color:linear-gradient(to right,#E53935,#C62828);
+}
+
+.pdf-button:hover{
+    -fx-scale-x:1.05;
+    -fx-scale-y:1.05;
+}
+
+.excel-button{
+    -fx-background-color:linear-gradient(to right,#43A047,#2E7D32);
+}
+
+.excel-button:hover{
+    -fx-scale-x:1.05;
+    -fx-scale-y:1.05;
+}
+
+.dashboard-button{
+    -fx-background-color:linear-gradient(to right,#1565C0,#1976D2);
+}
+
+.dashboard-button:hover{
+    -fx-scale-x:1.05;
+    -fx-scale-y:1.05;
+}
+
+.button:pressed{
+    -fx-scale-x:.97;
+    -fx-scale-y:.97;
+}

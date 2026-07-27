@@ -1,0 +1,161 @@
+.rootPane{
+
+    -fx-background-color: linear-gradient(to right,#F3F7FA,#E8EEF5);
+
+}
+
+/* LEFT PANEL */
+
+.leftPane{
+
+    -fx-background-color: linear-gradient(to bottom,#1976D2,#0D47A1);
+}
+
+.houseIcon{
+
+    -fx-font-size:90;
+}
+
+.title{
+
+    -fx-text-fill:white;
+    -fx-font-size:30;
+    -fx-font-weight:bold;
+}
+
+.subtitle{
+
+    -fx-text-fill:white;
+    -fx-font-size:18;
+}
+
+.description{
+
+    -fx-text-fill:white;
+    -fx-font-size:16;
+    -fx-alignment:center;
+    -fx-text-alignment:center;
+}
+
+
+/* LOGIN CARD */
+
+.loginCard{
+
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-background-radius:20;
+
+    -fx-border-radius:20;
+
+    -fx-effect:dropshadow(gaussian,rgba(0,0,0,.25),30,0.3,0,8);
+
+}
+
+/* TEXT */
+
+.welcome{
+
+    -fx-font-size:30;
+    -fx-font-weight:bold;
+    -fx-text-fill:#263238;
+}
+
+.loginText{
+
+    -fx-text-fill:#757575;
+    -fx-font-size:15;
+}
+
+/* INPUT */
+
+.input{
+
+    -fx-background-radius:10;
+    -fx-border-radius:10;
+
+    -fx-background-color:white;
+
+    -fx-border-color:#CFD8DC;
+
+    -fx-font-size:15;
+
+    -fx-padding:10 15;
+
+}
+
+.input:focused{
+
+    -fx-border-color:#1976D2;
+
+    -fx-border-width:2;
+
+}
+
+/* LOGIN BUTTON */
+
+.loginButton{
+
+    -fx-background-color:#1976D2;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:15;
+
+    -fx-font-weight:bold;
+
+    -fx-background-radius:10;
+
+    -fx-cursor:hand;
+}
+
+.loginButton:hover{
+
+    -fx-background-color:#1565C0;
+}
+
+/* CLEAR BUTTON */
+
+.clearButton{
+
+    -fx-background-color:#ECEFF1;
+
+    -fx-text-fill:#37474F;
+
+    -fx-font-size:15;
+
+    -fx-font-weight:bold;
+
+    -fx-background-radius:10;
+
+    -fx-cursor:hand;
+}
+
+.clearButton:hover{
+
+    -fx-background-color:#CFD8DC;
+}
+
+/* CHECKBOX */
+
+.remember{
+
+    -fx-font-size:14;
+}
+
+/* LINK */
+
+.link{
+
+    -fx-text-fill:#1976D2;
+}
+
+/* STATUS */
+
+.status{
+
+    -fx-font-size:14;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:#2E7D32;
+}

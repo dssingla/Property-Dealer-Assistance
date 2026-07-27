@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="PropertyFinder.PropertyFinderController"
+            prefWidth="1350"
+            prefHeight="760"
+            stylesheets="@style.css"
+            styleClass="root">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <StackPane prefHeight="75"
+                   styleClass="header">
+
+            <Label text="🏡 Property Finder"
+                   styleClass="header-title"/>
+
+        </StackPane>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Search Card -->
+
+            <VBox spacing="20"
+                  styleClass="search-card">
+
+                <Label text="Search Properties"
+                       styleClass="section-title"/>
+
+                <HBox spacing="20"
+                      alignment="CENTER_LEFT">
+
+                    <VBox spacing="8">
+                        <Label text="City"/>
+                        <ComboBox fx:id="cmbCity" prefWidth="170"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="Area"/>
+                        <ComboBox fx:id="cmbArea" prefWidth="170"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="Property Type"/>
+                        <ComboBox fx:id="cmbPropertyType" prefWidth="170"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="Structure"/>
+                        <ComboBox fx:id="cmbStructure" prefWidth="170"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="Status"/>
+                        <ComboBox fx:id="cmbStatus"
+                                  prefWidth="140"
+                                  promptText="Select Status"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="Min Price"/>
+                        <TextField fx:id="txtMinPrice"
+                                   prefWidth="140"
+                                   promptText="Minimum"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="Max Price"/>
+                        <TextField fx:id="txtMaxPrice"
+                                   prefWidth="140"
+                                   promptText="Maximum"/>
+                    </VBox>
+
+                </HBox>
+
+                <HBox alignment="CENTER">
+
+                    <Button fx:id="btnFind"
+                            text="🔍 Find Properties"
+                            prefWidth="220"
+                            prefHeight="42"
+                            styleClass="find-button"
+                            onAction="#doFindProperty"/>
+
+                </HBox>
+
+            </VBox>
+
+            <!-- Table -->
+
+            <TableView fx:id="propertyTable"
+                       VBox.vgrow="ALWAYS">
+
+                <columns>
+
+                    <TableColumn fx:id="colArea"
+                                 text="Area"
+                                 prefWidth="100"/>
+
+                    <TableColumn fx:id="colCity"
+                                 text="City"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colSize"
+                                 text="Size"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="colFront"
+                                 text="Front"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="colRear"
+                                 text="Rear"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="colLeft"
+                                 text="Left"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="colRight"
+                                 text="Right"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="colFacing"
+                                 text="Facing"
+                                 prefWidth="100"/>
+
+                    <TableColumn fx:id="colPropertyType"
+                                 text="Property Type"
+                                 prefWidth="140"/>
+
+                    <TableColumn fx:id="colConstruction"
+                                 text="Construction"
+                                 prefWidth="130"/>
+
+                    <TableColumn fx:id="colApprovedBy"
+                                 text="Approved By"
+                                 prefWidth="130"/>
+
+                    <TableColumn fx:id="colPrice"
+                                 text="Price"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colOtherInfo"
+                                 text="Other Info"
+                                 prefWidth="160"/>
+
+                    <TableColumn fx:id="colImage1"
+                                 text="Image 1"
+                                 prefWidth="150"/>
+
+                    <TableColumn fx:id="colImage2"
+                                 text="Image 2"
+                                 prefWidth="150"/>
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER"
+              spacing="20"
+              prefHeight="80">
+
+            <padding>
+                <Insets top="15"
+                        right="20"
+                        bottom="15"
+                        left="20"/>
+            </padding>
+
+            <Button fx:id="btnPDF"
+                    text="📄 Create PDF"
+                    prefWidth="180"
+                    prefHeight="42"
+                    styleClass="pdf-button"
+                    onAction="#doPDF"/>
+
+            <Button fx:id="btnExcel"
+                    text="📊 Export Excel"
+                    prefWidth="180"
+                    prefHeight="42"
+                    styleClass="excel-button"
+                    onAction="#exportExcel"/>
+
+            <Button fx:id="btnDashboard"
+                    text="🏠 Dashboard"
+                    prefWidth="180"
+                    prefHeight="42"
+                    styleClass="dashboard-button"
+                    onAction="#goDashboard"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Deals.DealsController"
+            prefWidth="1200.0"
+            prefHeight="760.0"
+            stylesheets="@style.css">
+
+    <children>
+
+        <VBox spacing="18"
+              AnchorPane.topAnchor="20"
+              AnchorPane.bottomAnchor="20"
+              AnchorPane.leftAnchor="20"
+              AnchorPane.rightAnchor="20">
+
+            <!-- Heading -->
+            <Label text="Finalize Deal">
+                <font>
+                    <Font size="30"/>
+                </font>
+            </Label>
+
+            <!-- Property -->
+            <TitledPane text="Property Information" expanded="true">
+                <content>
+
+                    <GridPane hgap="15" vgap="15">
+
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="170"/>
+                            <ColumnConstraints hgrow="ALWAYS"/>
+                        </columnConstraints>
+
+                        <Label text="Property ID"/>
+                        <TextField fx:id="txtPropertyID"
+                                   editable="false"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Property"
+                               GridPane.rowIndex="1"/>
+
+                        <ComboBox fx:id="cmbProperty"
+                                  prefWidth="300"
+                                  GridPane.columnIndex="1"
+                                  GridPane.rowIndex="1"/>
+
+                    </GridPane>
+
+                </content>
+            </TitledPane>
+
+            <!-- Seller & Buyer -->
+            <HBox spacing="20">
+
+                <children>
+
+                    <TitledPane text="Seller Information"
+                                expanded="true"
+                                HBox.hgrow="ALWAYS">
+
+                        <content>
+
+                            <GridPane hgap="15" vgap="15">
+
+                                <padding>
+                                    <Insets top="20" right="20" bottom="20" left="20"/>
+                                </padding>
+
+                                <columnConstraints>
+                                    <ColumnConstraints prefWidth="170"/>
+                                    <ColumnConstraints hgrow="ALWAYS"/>
+                                </columnConstraints>
+
+                                <Label text="Seller Name"/>
+                                <TextField fx:id="txtSellerName"
+                                           promptText="Enter Seller Name"
+                                           GridPane.columnIndex="1"/>
+
+                                <Label text="Seller Contact"
+                                       GridPane.rowIndex="1"/>
+
+                                <TextField fx:id="txtSellerPhone"
+                                           promptText="9876543210"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="1"/>
+
+                            </GridPane>
+
+                        </content>
+
+                    </TitledPane>
+
+                    <TitledPane text="Buyer Information"
+                                expanded="true"
+                                HBox.hgrow="ALWAYS">
+
+                        <content>
+
+                            <GridPane hgap="15" vgap="15">
+
+                                <padding>
+                                    <Insets top="20" right="20" bottom="20" left="20"/>
+                                </padding>
+
+                                <columnConstraints>
+                                    <ColumnConstraints prefWidth="170"/>
+                                    <ColumnConstraints hgrow="ALWAYS"/>
+                                </columnConstraints>
+
+                                <Label text="Buyer Name"/>
+                                <TextField fx:id="txtBuyerName"
+                                           promptText="Enter Buyer Name"
+                                           GridPane.columnIndex="1"/>
+
+                                <Label text="Buyer Contact"
+                                       GridPane.rowIndex="1"/>
+
+                                <TextField fx:id="txtBuyerPhone"
+                                           promptText="9876543210"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="1"/>
+
+                            </GridPane>
+
+                        </content>
+
+                    </TitledPane>
+
+                </children>
+
+            </HBox>
+
+            <!-- Financial -->
+            <HBox spacing="20">
+
+                <children>
+
+                    <!-- Financial Details -->
+                    <TitledPane text="Financial Details"
+                                expanded="true"
+                                HBox.hgrow="ALWAYS">
+
+                        <content>
+
+                            <GridPane hgap="15" vgap="15">
+
+                                <padding>
+                                    <Insets top="20" right="20" bottom="20" left="20"/>
+                                </padding>
+
+                                <columnConstraints>
+                                    <ColumnConstraints prefWidth="170"/>
+                                    <ColumnConstraints hgrow="ALWAYS"/>
+                                    <ColumnConstraints prefWidth="170"/>
+                                    <ColumnConstraints hgrow="ALWAYS"/>
+                                </columnConstraints>
+
+                                <rowConstraints>
+                                    <RowConstraints/>
+                                    <RowConstraints/>
+                                    <RowConstraints/>
+                                    <RowConstraints/>
+                                </rowConstraints>
+
+                                <!-- Row 1 -->
+                                <Label text="Final Amount"/>
+                                <TextField fx:id="txtFinalAmount"
+                                           GridPane.columnIndex="1"/>
+
+                                <Label text="Down Payment"
+                                       GridPane.columnIndex="2"/>
+                                <TextField fx:id="txtDownPayment"
+                                           GridPane.columnIndex="3"/>
+
+                                <!-- Row 2 -->
+                                <Label text="Commission"
+                                       GridPane.rowIndex="1"/>
+                                <TextField fx:id="txtCommission"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="1"/>
+
+                                <Label text="Advance"
+                                       GridPane.columnIndex="2"
+                                       GridPane.rowIndex="1"/>
+                                <TextField fx:id="txtAdvance"
+                                           GridPane.columnIndex="3"
+                                           GridPane.rowIndex="1"/>
+
+                                <!-- Row 3 -->
+                                <Label text="Balance"
+                                       GridPane.rowIndex="2"/>
+                                <TextField fx:id="txtBalance"
+                                           GridPane.columnIndex="1"
+                                           GridPane.rowIndex="2"/>
+
+                                <!-- Buttons -->
+                                <HBox spacing="20"
+                                      alignment="CENTER_LEFT"
+                                      GridPane.rowIndex="3"
+                                      GridPane.columnIndex="0"
+                                      GridPane.columnSpan="4">
+
+                                    <children>
+
+                                        <Button fx:id="btnSave"
+                                                text="💾 Save"
+                                                prefWidth="170"
+                                                prefHeight="42"
+                                                onAction="#doSave"/>
+
+                                        <Button fx:id="btnModify"
+                                                text="✏ Modify"
+                                                prefWidth="170"
+                                                prefHeight="42"
+                                                onAction="#doModify"/>
+
+                                        <Button fx:id="goDashboard"
+                                                text="🏠 Dashboard"
+                                                prefWidth="170"
+                                                prefHeight="42"
+                                                onAction="#goDashboard"/>
+
+                                    </children>
+
+                                    <GridPane.margin>
+                                        <Insets top="20"/>
+                                    </GridPane.margin>
+
+                                </HBox>
+
+                            </GridPane>
+
+                        </content>
+
+                    </TitledPane>
+
+                    <!-- Right Side -->
+                    <VBox spacing="15">
+
+                        <children>
+
+                            <TitledPane text="Timeline" expanded="true">
+
+                                <content>
+
+                                    <GridPane hgap="15" vgap="15">
+
+                                        <padding>
+                                            <Insets top="20" right="20" bottom="20" left="20"/>
+                                        </padding>
+
+                                        <columnConstraints>
+                                            <ColumnConstraints prefWidth="120"/>
+                                            <ColumnConstraints hgrow="ALWAYS"/>
+                                        </columnConstraints>
+
+                                        <Label text="Deal Date"/>
+                                        <DatePicker fx:id="dpDealDate"
+                                                    GridPane.columnIndex="1"/>
+
+                                        <Label text="Registry Date"
+                                               GridPane.rowIndex="1"/>
+                                        <DatePicker fx:id="dpRegistryDate"
+                                                    GridPane.columnIndex="1"
+                                                    GridPane.rowIndex="1"/>
+
+                                    </GridPane>
+
+                                </content>
+
+                            </TitledPane>
+
+                            <TitledPane text="Deal Status" expanded="true">
+
+                                <content>
+
+                                    <VBox spacing="10">
+
+                                        <padding>
+                                            <Insets top="20" right="20" bottom="20" left="20"/>
+                                        </padding>
+
+                                        <children>
+
+                                            <RadioButton fx:id="rbOngoing"
+                                                         text="Ongoing"/>
+
+                                            <RadioButton fx:id="rbCompleted"
+                                                         text="Completed"/>
+
+                                            <RadioButton fx:id="rbCancelled"
+                                                         text="Cancelled"/>
+
+                                        </children>
+
+                                    </VBox>
+
+                                </content>
+
+                            </TitledPane>
+
+                        </children>
+
+                    </VBox>
+
+                </children>
+
+            </HBox>
+        </VBox>
+
+    </children>
+
+</AnchorPane>
