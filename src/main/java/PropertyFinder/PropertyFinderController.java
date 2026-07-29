@@ -147,6 +147,7 @@ public class PropertyFinderController {
             pst.setString(4, cmbStructure.getValue());
             pst.setDouble(5, Double.parseDouble(txtMinPrice.getText()));
             pst.setDouble(6, Double.parseDouble(txtMaxPrice.getText()));
+            pst.setString(7, cmbStatus.getValue());
 
             ResultSet rs = pst.executeQuery();
 
@@ -355,11 +356,15 @@ public class PropertyFinderController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Dashboard/DashboardView.fxml"));
             Parent root = loader.load();
 
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
+            Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.centerOnScreen();
             stage.setTitle("Dashboard");
             stage.setMaximized(true);
+            stage.show();
+
+            Stage loginStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            loginStage.close();
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,0 +1,9 @@
+db.url=jdbc:mysql://localhost:3306/propertydealer
+db.user=root
+db.password=your_password
+
+
+mysql.bin=C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\
+
+APP_NAME=Property Dealer Assistance
+APP_VERSION=1.0

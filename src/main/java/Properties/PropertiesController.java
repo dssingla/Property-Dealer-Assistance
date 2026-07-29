@@ -369,6 +369,7 @@ public class PropertiesController {
                     + "other_info=?, "
                     + "image1=?, "
                     + "image2=? "
+                    + "property_status=?"
                     + "WHERE property_id=?";
 
             pst = con.prepareStatement(query);
